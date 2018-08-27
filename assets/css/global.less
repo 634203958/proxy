@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+// 1. reset 的目的不是清除浏览器的默认样式，这仅是部分工作。清除和重置是紧密不可分的。
+// 2. reset 的目的不是让默认样式在所有浏览器下一致，而是减少默认样式有可能带来的问题。
+// 3. reset 期望提供一套普适通用的基础样式。但没有银弹，推荐根据具体需求，裁剪和修改后再使用。
+
+html, body {
+    max-width: 800px;
+    margin: auto;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    color: #333333;
+    font-style: normal;
+    font-family: HanHei SC, PingHei, PingFang SC, STHeitiSC-Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    background: #fff;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+html * {
+    outline: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+    font-style: normal;
+    font-family: HanHei SC, PingHei, PingFang SC, STHeitiSC-Light, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+abbr,
+acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: 500;
+}
+
+em,
+i,
+cite,
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+    word-wrap: break-word;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 300;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
+ins,
+a {
+    text-decoration: none;
+}
+
+input, button, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border: none;
+    line-height: 1.5em;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    line-height: 1.5em;
+    color: #c9c9c9;
+}
+
+.clear:before,
+.clear:after {
+    content: " ";
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+
+.hide {
+    display: none;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+.m-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.no-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-bg{
+    background: url('data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAM1BMVEUAAAD///////////////////////////////////////////////////////////////+3leKCAAAAEHRSTlMAQO+/gBBgMN+fz49QIK9wowOTAAAAAstJREFUWMPtmNlS6zAMQL3J+6L//9oLJI3iSBlieLkz9Lx0KO2pZC1Nqt68efPf0Ua3H6QRtr9ryfhJ7B7UOpDwwGqlXETCuGVlNXimKIsTUa/5PF6wweDMWPEFZHSHF9KCMCLHsyfLY59Dgaj5ZzwVGpRwFi8YeNiAEe9CXE86aK0Bsmj0PMTvQktfyeYG6WGI9dlsmKBEo7YrOWtzSqWKxsT7/fFseNEIrP738SE+MPrChFU+RqBOoXO0fP4CO1aNCeTZ4EaheyBzIWZ4NrwRAjuyWrhQMgaUsKqyNgmSELtcYmGyyjVqZSQhVnaEMpqdGfTLK7a3xodCA9cU6xCF6JlQpl+TdpeGDftb8ywceEeFeCkUThzt39icyETwl6rkWWjl7Z1vjU7Z2dDngOPxuplWDMo0LVSBzljeO8F6UD6KwjSHqAerEReCQTSOKcUQh570XhSm44JlGCnEeNs3UCRhO/p4KOhCiP5OmKmafQrwIAdVWZAFzEkI03/ESx0ztwlY9mWZproStdLIsK6mINkken0zKpAo+fvdZfw17a4iE9LzbFCcUNcwG6GQpJ0iDzSRkpCwEOKUcxWrTBnX7zZDbpCnnCVhUka89gRxtQYw81LhQu2pIhNWNp7PsR7nMhydm30dEPuK+tZYNG2bazM5xbCysXmhWYKdA7RBcSiUiQzUAMfQqngKMJemRJqVjRR76K+4jgCbBnUP6JEy7/Cj1H4PtuuVOwDwydxMsav743gF/5TaJ2Moc2S674/qOc2Z88jEvdf2mhi6tl7AR+rAuu/EzRvojmdRaS6X/pvQOUp4kaMHYzv1X8jLCfPmdGlbD4c8q58yzDbU5pV5cV8jqX5M+8owuZcwxB8dIFvnYRdmLY7I+q8ZNm1C3/myWuezsBpRZzSBlv1vgIzJovos9299dN/rPoQmkO+3pGKVq3qoN2/+JP8AQzei0Be4k/4AAAAASUVORK5CYII=') 50% 50% no-repeat #f5f5f5;
+    background-size: auto 60px;
+}
+
+@media screen and (max-width: 800px) {
+    html, body {
+        font-size: 21.8px !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html, body {
+        font-size: 20px !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    html, body {
+        font-size: 19px !important;
+    }
+}
+
+@media (device-width: 375px) and (device-height: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    body {
+        padding-bottom: constant(safe-area-inset-bottom);
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .iphonex {
+        display: block;
+        width: 100%;
+        height: constant(safe-area-inset-bottom);
+        height: env(safe-area-inset-bottom);
+        background: #fff;
+    }
+}

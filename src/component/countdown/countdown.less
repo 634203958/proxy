@@ -1,0 +1,48 @@
+@import '../../../assets/css/control';
+
+.countDown-container {
+    text-align: center;
+    background: @color_ff;
+    .timer-title {
+        padding-top: 0.75rem;
+    }
+    .active-over, .timer-title {
+        .fs(0.6rem, @color_41, 0.6rem);
+        .title-bg {
+            margin: 0 0.5rem;
+            width: 1.3rem;
+            height: 0.05rem;
+            vertical-align: middle;
+            display: inline-block;
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAACCAIAAACVJxhLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjlDNzdCNTZGMDZGMzExRTc4RkFERTkxQ0NEOTNGNkFBIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjlDNzdCNTcwMDZGMzExRTc4RkFERTkxQ0NEOTNGNkFBIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OUM3N0I1NkQwNkYzMTFFNzhGQURFOTFDQ0Q5M0Y2QUEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6OUM3N0I1NkUwNkYzMTFFNzhGQURFOTFDQ0Q5M0Y2QUEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6vsU+IAAAAFklEQVR42mK8e/cuw+ADTAyDEgAEGAAMqwKbNd75RgAAAABJRU5ErkJggg==") 50% 50% no-repeat;
+            background-size: auto 1.3rem;
+        }
+    }
+    .active-over {
+        line-height: 2rem !important;
+    }
+    .timer-count {
+        padding: 0.6rem 0;
+        .fs(0.55rem, @color_75, 0.55rem);
+        font-weight: 400;
+        .subtitle {
+            display: inline-block;
+            .fs(0.7rem, @color_41, 1.25rem);
+            font-weight: 400;
+            margin: 0 0.5rem 0 0;
+        }
+        .common-time {
+            display: inline-block;
+            min-width: 1.5rem;
+            margin: 0 0.2rem;
+            .fs(0.75rem, @color_ff, 1.25rem);
+            font-weight: 400;
+            border-radius: 0.1rem;
+            background: #0a1926;
+        }
+        .time-milliseSecond {
+            width: 1rem;
+            background: #ff131e;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../../assets/css/control';
+
+.shareBar-component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    .nav-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        transition: all 0.55s ease;
+        -webkit-transition: all 0.55s ease;
+        opacity: 0;
+    }
+    .nav-bg-active {
+        opacity: 1;
+    }
+    .nav-list {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 20;
+        transform: translateY(100%) translateZ(0);
+        -webkit-transform: translateY(100%) translateZ(0);
+        transition: all 0.25s ease;
+        -webkit-transition: all 0.25s ease;
+    }
+    .nav-list-active {
+        transform: translateY(0) translateZ(0);
+        -webkit-transform: translateY(0) translateZ(0);
+    }
+    .title {
+        padding: 30px 0 0 1.2rem;
+        .fs(0.8rem, #666666, 0.8rem);
+    }
+    .nav-tem {
+        width: 25%;
+        float: left;
+        .btn {
+            height: 6rem;
+            display: block;
+            width: 100%;
+            .fs(0.6rem, #666666, 8.3rem);
+            text-align: center;
+        }
+        .btn-friend {
+            background: url('https://static.caibeike.com/i/273ca7fc6f56dd86db445a909093708f-7ui7a6') 50% 0.9rem no-repeat;
+            background-size: auto 2.3rem;
+        }
+        .btn-circle {
+            background: url('https://static.caibeike.com/i/3e16c355132f6a012598e265c50d5ea8-rc2a0Z') 50% 0.9rem no-repeat;
+            background-size: auto 2.3rem;
+        }
+        .btn-sina {
+            background: url('https://static.caibeike.com/i/8e6e804555d2bddc987e53a36eeabbc8-pHpfmI') 50% 0.9rem no-repeat;
+            background-size: auto 2.3rem;
+        }
+    }
+}
