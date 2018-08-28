@@ -47,7 +47,7 @@ function handleSend(location, request, response) {
 
 // 使用代理并启动服务
 if (process.env.NODE_ENV === 'development') {
-    let proxyHost = 'http://pre.caibeike.net';
+    let proxyHost = 'http://dev.caibeike.net';
     let proxyName = '/mweb/';
     app.use(proxyName, proxy({
         target: proxyHost,  // 目标服务器 host

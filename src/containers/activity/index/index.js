@@ -62,6 +62,9 @@ class RudexComponent extends Component {
                 console.log(b);
             }));
 
+
+
+
     }
 
     // 设置redux的值

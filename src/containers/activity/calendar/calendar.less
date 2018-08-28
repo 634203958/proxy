@@ -1,0 +1,69 @@
+
+.calendar-container {
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 10px;
+    .calendar-week {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: #ffffff;
+        .item-week {
+            position: relative;
+            display: inline-block;
+            width: 14.285714%;
+            font-size: 13px;
+            line-height: 45px;
+            color: #414244;
+            text-align: center;
+            font-weight: 400;
+        }
+        .item-week-sun {
+            color: red;
+        }
+    }
+    .calendar-content {
+        background: #f5f5f5;
+        .calendar-list {
+            padding-bottom: 10px;
+            background: #ffffff;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+        .calendar-list-header {
+            padding: 10px;
+            font-size: 15px;
+            line-height: 30px;
+            color: #414244;
+            text-align: left;
+            font-weight: 400;
+        }
+        .item-day {
+            position: relative;
+            display: inline-block;
+            width: 14.285714%;
+            font-size: 14px;
+            line-height: 45px;
+            color: #414244;
+            font-weight: 400;
+            text-align: center;
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .item-day-active {
+            color: #fff;
+            background: #1eb6f8;
+            border-radius: 5px;
+        }
+    }
+}
+
+.calendar-notData {
+    font-size: 14px;
+    color: #414244;
+    text-align: center;
+    line-height: 50px;
+}

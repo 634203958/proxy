@@ -40,6 +40,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "bundle-loader": "^0.5.4",
+    "caibeike-util-static": "^1.0.1",
     "cbklog": "^1.0.6",
     "cookie-parser": "^1.4.3",
     "css-loader": "^0.25.0",

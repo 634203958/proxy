@@ -8,20 +8,20 @@ const routeList = {
             }, 'ActivityIndex');
         }
     },
-    ActivityTest: {
+    CalendarIndex: {
         title: 'test',
-        path: '/ms/activity/test',
+        path: '/ms/activity/calendar',
         getComponent(nextState, cb) {
             require.ensure([], function (require) {
-                return cb(null, require('../index/test').default);
-            }, 'ActivityTest');
+                return cb(null, require('../calendar/index').default);
+            }, 'CalendarIndex');
         }
     },
 };
 
 const activity = [
     routeList.ActivityIndex,
-    routeList.ActivityTest
+    routeList.CalendarIndex
 ];
 
 export {activity};
